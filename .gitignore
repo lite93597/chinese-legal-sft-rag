@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+artifacts/
+publication_state.json
+publication_receipt.json
+local-index/

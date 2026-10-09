@@ -1,0 +1,13 @@
+DATA: MIXED UPSTREAM TERMS / RIGHTS NOT FULLY CONFIRMED
+
+No single license is granted over all dataset content. Individual records retain
+their upstream sources, research-use limitations and unresolved redistribution
+statuses. See docs/SOURCES_AND_LICENSES.md and licenses/upstream/.
+Public availability is not a grant of missing rights. This release does not
+authorize commercial use or further redistribution where those rights have not
+been established. Modifications do not automatically remove upstream terms.
+
+The original release scripts have separate MIT terms in LICENSE-CODE.txt.
+Those code terms do not cover the dataset, upstream notices, model weights or
+other third-party content. This file must not be treated as a dataset-wide MIT
+or Apache license.

@@ -1,0 +1,221 @@
+{
+  "archive_name": "legal-rag-faiss-v4.zip",
+  "archive_bytes": 209374944,
+  "archive_sha256": "08d5181d75c7f268a164ccb85b1a643ae0bb4b559d8cbd74d6afce290040a377",
+  "parts": [
+    {
+      "path": "data/rag/faiss/part-0000.zip.part",
+      "bytes": 5242880,
+      "sha256": "682e78ecdfe1bce862e1ccd9d50fee955ad8639f96a79f751c8558ce10bc01fe"
+    },
+    {
+      "path": "data/rag/faiss/part-0001.zip.part",
+      "bytes": 5242880,
+      "sha256": "30fc7dfbce1caf65bb92e359394028c05e6896fb1d1e5f7f6e0723ef75e849ef"
+    },
+    {
+      "path": "data/rag/faiss/part-0002.zip.part",
+      "bytes": 5242880,
+      "sha256": "7b891ffe0c23abd7d60a3adc595bb17d22243a2726f16c6b16fa82123dfe84dc"
+    },
+    {
+      "path": "data/rag/faiss/part-0003.zip.part",
+      "bytes": 5242880,
+      "sha256": "39d23625093fbad7a87ab1b4468c370664863ea369e258f889a8d7be385904e1"
+    },
+    {
+      "path": "data/rag/faiss/part-0004.zip.part",
+      "bytes": 5242880,
+      "sha256": "8eba11c3ed81fd08415e0360994bc0e85ef18dc0ea28c9cb5c19d384b9d73638"
+    },
+    {
+      "path": "data/rag/faiss/part-0005.zip.part",
+      "bytes": 5242880,
+      "sha256": "d98bde1126768964e0421350186bff514320b80f42efd450636788a5a4940eee"
+    },
+    {
+      "path": "data/rag/faiss/part-0006.zip.part",
+      "bytes": 5242880,
+      "sha256": "f81a6b0a82e743e45ef1e70225769d069841903f6ba88ac3b425d507b4402453"
+    },
+    {
+      "path": "data/rag/faiss/part-0007.zip.part",
+      "bytes": 5242880,
+      "sha256": "8436b2a5bbb864c166aed5f5b637b4462cc1129aa555a5b41cc38ed09ccbad70"
+    },
+    {
+      "path": "data/rag/faiss/part-0008.zip.part",
+      "bytes": 5242880,
+      "sha256": "3077942f648febd56ade14d007590aa2a40d6f3cbbeffb5d9fe64154eb402223"
+    },
+    {
+      "path": "data/rag/faiss/part-0009.zip.part",
+      "bytes": 5242880,
+      "sha256": "a060d0c1c520927542209db1feb0a1cf9d15328207c445b20b131400e0187085"
+    },
+    {
+      "path": "data/rag/faiss/part-0010.zip.part",
+      "bytes": 5242880,
+      "sha256": "bfd4782667c41d0691ef96945591313a2c6f1324d8296ca6d6c84f7bfbb5d0b9"
+    },
+    {
+      "path": "data/rag/faiss/part-0011.zip.part",
+      "bytes": 5242880,
+      "sha256": "d12cda4e6592c96a75604cbaac430fbffaf60c0fdf98265c2ffb8593068dc5e0"
+    },
+    {
+      "path": "data/rag/faiss/part-0012.zip.part",
+      "bytes": 5242880,
+      "sha256": "602fe6f2a7546f1f6257388a6f21274f6caa1222ef406a80ed10b9b0aa310b10"
+    },
+    {
+      "path": "data/rag/faiss/part-0013.zip.part",
+      "bytes": 5242880,
+      "sha256": "36c1dd02f73b64f233a6e1e9011658a9ec2d8d97b05b7d0a16cf7ab19038a184"
+    },
+    {
+      "path": "data/rag/faiss/part-0014.zip.part",
+      "bytes": 5242880,
+      "sha256": "61eba26ac5c7fdd5ec096992bb13fd2380b6eaf59191af0822341209f043cf4d"
+    },
+    {
+      "path": "data/rag/faiss/part-0015.zip.part",
+      "bytes": 5242880,
+      "sha256": "ecb7c2b0e65af896f9f987ab250bbfb5123c743846cab45b340a34b6ac990e20"
+    },
+    {
+      "path": "data/rag/faiss/part-0016.zip.part",
+      "bytes": 5242880,
+      "sha256": "26d0ebf3d9e05d2ad8b3f8c5f8873b43b22046ab59ff1df530b7b0df22fea65b"
+    },
+    {
+      "path": "data/rag/faiss/part-0017.zip.part",
+      "bytes": 5242880,
+      "sha256": "3df3a64982cc0cc83b135c212f75736c48b4ffbe58e2cdc1d4f9c7d924180b5f"
+    },
+    {
+      "path": "data/rag/faiss/part-0018.zip.part",
+      "bytes": 5242880,
+      "sha256": "cfc579b50b33de5adb5f2b535a837d7ae2fe0528928d859efbbb5f2d488fedad"
+    },
+    {
+      "path": "data/rag/faiss/part-0019.zip.part",
+      "bytes": 5242880,
+      "sha256": "ecd41aadb817abab5c03e049d3a92126a1512d2f613c7f831cb3ddf8bd52f3f9"
+    },
+    {
+      "path": "data/rag/faiss/part-0020.zip.part",
+      "bytes": 5242880,
+      "sha256": "0a9185be5ea27a222c87f53219c4231bbaae46db78e7f117052815db671beba5"
+    },
+    {
+      "path": "data/rag/faiss/part-0021.zip.part",
+      "bytes": 5242880,
+      "sha256": "729ad73f1153ae67e067068db061a9cf7d1d16e46972fda6c5ebc2eaad335e15"
+    },
+    {
+      "path": "data/rag/faiss/part-0022.zip.part",
+      "bytes": 5242880,
+      "sha256": "6cecb82f7452cc98270c888d41dfc18dc93371b0dd61c21e410d07d070e0e859"
+    },
+    {
+      "path": "data/rag/faiss/part-0023.zip.part",
+      "bytes": 5242880,
+      "sha256": "9d037dc03cf7a91320b4cd9d2bd4d58b42f18158c2acbadc1674b7e43777821f"
+    },
+    {
+      "path": "data/rag/faiss/part-0024.zip.part",
+      "bytes": 5242880,
+      "sha256": "18b3d02948f086b996e36a4221e7b16adfe074583ed360cfc6cf8ca66a2bba2f"
+    },
+    {
+      "path": "data/rag/faiss/part-0025.zip.part",
+      "bytes": 5242880,
+      "sha256": "c063772a54b4ffe774c60b7abfb7c3c5d148c01b47c509d23a5fc392d11cbcbd"
+    },
+    {
+      "path": "data/rag/faiss/part-0026.zip.part",
+      "bytes": 5242880,
+      "sha256": "461b3f5fdc22257d1464ad9a1e935ec4e29c1faf44045d32e28c8574afb9015e"
+    },
+    {
+      "path": "data/rag/faiss/part-0027.zip.part",
+      "bytes": 5242880,
+      "sha256": "5e32c14ee9f10a30530fab47987e22acee2f99cfbbbcb5b9d856146e32883a9f"
+    },
+    {
+      "path": "data/rag/faiss/part-0028.zip.part",
+      "bytes": 5242880,
+      "sha256": "776a2278606ec071d6ea7bde01925a899c8cdbb7c4e34cc389db51f518f00961"
+    },
+    {
+      "path": "data/rag/faiss/part-0029.zip.part",
+      "bytes": 5242880,
+      "sha256": "191447b0672802890eeb60e2f190f78c1f25ce4bbc252ec6ef9c3481375240e6"
+    },
+    {
+      "path": "data/rag/faiss/part-0030.zip.part",
+      "bytes": 5242880,
+      "sha256": "4426da7495f631f03ac8eec1fbd5e864f658ce363fd711f536d2c76b64d3c80c"
+    },
+    {
+      "path": "data/rag/faiss/part-0031.zip.part",
+      "bytes": 5242880,
+      "sha256": "725500125ab9c721a859ce076aa51094b60657b2ff46b0173973cc87790849cd"
+    },
+    {
+      "path": "data/rag/faiss/part-0032.zip.part",
+      "bytes": 5242880,
+      "sha256": "24e3c437cfe5d2bc7745db6601588352784f81f9bb5456d4efaf5c000274dff0"
+    },
+    {
+      "path": "data/rag/faiss/part-0033.zip.part",
+      "bytes": 5242880,
+      "sha256": "c5968c223d072ccd34c829f1807b8defbc93e3f08f08952a47e0a47209270e54"
+    },
+    {
+      "path": "data/rag/faiss/part-0034.zip.part",
+      "bytes": 5242880,
+      "sha256": "aab88eece6d9254fa8004980312be9d19b72fe733033716cce2ed0d4f2f7445c"
+    },
+    {
+      "path": "data/rag/faiss/part-0035.zip.part",
+      "bytes": 5242880,
+      "sha256": "c4fe4870efaca60d78be5837234deb1a71f9d9ae0d524368ea54dbb55bda0a6d"
+    },
+    {
+      "path": "data/rag/faiss/part-0036.zip.part",
+      "bytes": 5242880,
+      "sha256": "b15a9d94a03fe0326b89e542e10048aa7dc5d69e61d16c8872eed8c20402b24c"
+    },
+    {
+      "path": "data/rag/faiss/part-0037.zip.part",
+      "bytes": 5242880,
+      "sha256": "d875426904655cf5fe57ea6d13e9004d86b552e0f6173f0ac09f4a21a7984446"
+    },
+    {
+      "path": "data/rag/faiss/part-0038.zip.part",
+      "bytes": 5242880,
+      "sha256": "f7f2965ccafc1a20eceabc72f172359408d0d148b395077bffd4cb161d160469"
+    },
+    {
+      "path": "data/rag/faiss/part-0039.zip.part",
+      "bytes": 4902624,
+      "sha256": "b1fb40a8dffe79733361c4deb53e00e80673e0e453cc3faa9e2fa31787da2601"
+    }
+  ],
+  "members": {
+    "law.index": {
+      "bytes": 208965677,
+      "sha256": "67c892792636e697ee5b2ce78d72321e639d3d78a9fc0090d57f5958ef405966"
+    },
+    "metadata.json": {
+      "bytes": 272389776,
+      "sha256": "fa193a9529e6f7b1b5f341e2d7c723c68ae72151e2d85fe60645716376819f6d"
+    },
+    "index_info.json": {
+      "bytes": 338,
+      "sha256": "2f55d93126b534fba81ab71c0cd3c0850131ebecfa21f58a79bb4456407fc9f8"
+    }
+  }
+}
