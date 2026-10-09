@@ -1,0 +1,125 @@
+{
+  "experiment": "legal-v4",
+  "model_label": "Qwen3.8-27B",
+  "scope": "development_mini_not_official_full_or_independent_blind_test",
+  "status": "original_evaluation_completed",
+  "score_scale": "0-100",
+  "aggregation": "equal_weight_task_macro_average_within_each_benchmark",
+  "benchmarks": {
+    "lawbench": {
+      "questions": 500,
+      "tasks": 20
+    },
+    "disc": {
+      "questions": 143,
+      "tasks": 11
+    },
+    "lexeval": {
+      "questions": 708,
+      "tasks": 23
+    }
+  },
+  "conditions": {
+    "base": {
+      "run_id": "qwen38-27b-base-vllm-mini-20261006-v4",
+      "questions": 1351,
+      "tasks": 54,
+      "benchmark_totals": {
+        "lawbench": 58.22621283359049,
+        "disc": 68.81811907898864,
+        "lexeval": 65.44435567595036
+      },
+      "output_limit_hits": 3,
+      "paid_receipts": 45
+    },
+    "rag": {
+      "run_id": "qwen38-27b-rag-vllm-mini-20261006-v4",
+      "questions": 1351,
+      "tasks": 54,
+      "benchmark_totals": {
+        "lawbench": 58.06916774847488,
+        "disc": 72.79249534684318,
+        "lexeval": 64.67591187832004
+      },
+      "output_limit_hits": 2,
+      "paid_receipts": 45
+    },
+    "sft": {
+      "run_id": "qwen38-27b-sft-vllm-mini-20261006-v4",
+      "questions": 1351,
+      "tasks": 54,
+      "benchmark_totals": {
+        "lawbench": 62.33462751004265,
+        "disc": 65.9464468703599,
+        "lexeval": 68.32029547364525
+      },
+      "output_limit_hits": 2,
+      "paid_receipts": 45
+    },
+    "sft_rag": {
+      "run_id": "qwen38-27b-sft-rag-vllm-mini-20261006-v4",
+      "questions": 1351,
+      "tasks": 54,
+      "benchmark_totals": {
+        "lawbench": 63.298824144455104,
+        "disc": 69.83641278206495,
+        "lexeval": 67.72042658108013
+      },
+      "output_limit_hits": 3,
+      "paid_receipts": 45
+    }
+  },
+  "contrasts_percentage_points": {
+    "rag_minus_base": {
+      "lawbench": -0.15704508511560533,
+      "disc": 3.974376267854538,
+      "lexeval": -0.7684437976303258
+    },
+    "sft_minus_base": {
+      "lawbench": 4.108414676452163,
+      "disc": -2.8716722086287376,
+      "lexeval": 2.8759397976948833
+    },
+    "sft_rag_minus_rag": {
+      "lawbench": 5.229656395980221,
+      "disc": -2.956082564778228,
+      "lexeval": 3.0445147027600967
+    },
+    "sft_rag_minus_sft": {
+      "lawbench": 0.9641966344124526,
+      "disc": 3.8899659117050476,
+      "lexeval": -0.5998688925651123
+    },
+    "sft_rag_minus_base": {
+      "lawbench": 5.072611310864616,
+      "disc": 1.01829370307631,
+      "lexeval": 2.276070905129771
+    }
+  },
+  "joint_generation_seconds": {
+    "original": 1897.9281541220844,
+    "v4": 994.5940550118685
+  },
+  "timing_scope": "coupled requests and cases; not per-mode time or pure backend speedup",
+  "cases": {
+    "families": 8,
+    "linked_inputs": 16,
+    "answers": 32,
+    "answer_lengths": {
+      "original": {
+        "mean_output_tokens": 2915.125,
+        "output_length_finishes": 0
+      },
+      "v4_sft_rag": {
+        "mean_output_tokens": 773.3125,
+        "output_length_finishes": 0
+      }
+    },
+    "independent_blind_test": false
+  },
+  "source_record": {
+    "name": "four_condition_integrity.json",
+    "sha256": "4cf8dfdf4a58274a08b08a6f45f524946075721a26fe14384e37060f4c8f7dc1"
+  },
+  "raw_benchmark_questions_or_answers_included": false
+}

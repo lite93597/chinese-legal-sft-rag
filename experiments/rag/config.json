@@ -1,0 +1,35 @@
+{
+  "kind": "recorded_rag_recipe_not_standalone_entrypoint",
+  "experiment": "legal-v4",
+  "embedding_model": "BAAI/bge-large-zh-v1.5",
+  "embedding_dimension": 1024,
+  "embedding_max_length": 512,
+  "embedding_normalized": true,
+  "reranker_model": "Qwen3-Reranker-0.6B",
+  "embedding_and_reranker_new_training": false,
+  "faiss": {
+    "metric": "inner_product",
+    "vectors": 51017,
+    "device": "cpu"
+  },
+  "corpus_parent_units": 37748,
+  "policy": "RAG16",
+  "policy_source_sha256": "7c3ebc9278724f609deaf993ebf8671163ca01a6ebcddaa58eaf9d89903511c6",
+  "max_issues": 4,
+  "candidate_k": 24,
+  "max_documents": 6,
+  "added_context_tokens": 1600,
+  "whole_indexed_bodies": true,
+  "generation_limits": {
+    "input": 16384,
+    "output": 4096,
+    "scheduler_tokens": 4096,
+    "plain_batch": 32,
+    "submit_block": 128,
+    "dtype": "bfloat16"
+  },
+  "actual_embedding_dtype": "float16",
+  "actual_reranker_dtype": "float16",
+  "actual_embedding_and_reranker_device": "cuda:0",
+  "cross_device_numeric_equivalence_claimed": false
+}

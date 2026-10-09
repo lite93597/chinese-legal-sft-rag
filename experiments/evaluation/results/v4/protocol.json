@@ -1,0 +1,72 @@
+{
+  "experiment": "legal-v4",
+  "benchmarks": {
+    "lawbench": {
+      "questions": 500,
+      "tasks": 20
+    },
+    "disc": {
+      "questions": 143,
+      "tasks": 11
+    },
+    "lexeval": {
+      "questions": 708,
+      "tasks": 23
+    }
+  },
+  "questions_per_condition": 1351,
+  "tasks_per_condition": 54,
+  "paired_input_count": 2702,
+  "conditions": {
+    "base": {
+      "weights": "original",
+      "rag": false
+    },
+    "rag": {
+      "weights": "original",
+      "rag": true
+    },
+    "sft": {
+      "weights": "sft_v4",
+      "rag": false
+    },
+    "sft_rag": {
+      "weights": "sft_v4",
+      "rag": true
+    }
+  },
+  "inference": {
+    "backend": "vLLM",
+    "input": 16384,
+    "output": 4096,
+    "scheduler_tokens": 4096,
+    "plain_batch": 32,
+    "submit_block": 128,
+    "dtype": "bfloat16",
+    "sampling": {
+      "temperature": 0,
+      "top_p": 1,
+      "seed": 42
+    }
+  },
+  "scoring": {
+    "objective": "retained per-task implementation; metric and scale recorded in CSV",
+    "subjective_model": "DeepSeek-v4-pro",
+    "fresh_valid_api_receipts": 180,
+    "stages": 12,
+    "normalization": {
+      "0-1": "score * 100",
+      "1-5": "score / 5 * 100"
+    },
+    "aggregation": "equal_weight_task_macro_average_within_each_benchmark",
+    "aggregate_across_benchmarks": false
+  },
+  "benchmark_metric_note": "LawBench includes project-retained metric implementations, not a claim of official scorer equivalence",
+  "engineering_probes": {
+    "requests": 640,
+    "probe_inputs": 64,
+    "counted_as_benchmark_questions": false
+  },
+  "full_training_inference_scoring_source_published": false,
+  "model_weights_published": false
+}

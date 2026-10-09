@@ -1,10 +1,21 @@
 # Chinese Legal SFT + RAG Dataset｜中文法律微调与检索数据
 
-[English](README.en.md) · [SFT示例](#sft数据示例) · [RAG示例](#rag数据与检索示例) · [数据字段](docs/DATA_FORMAT.md) · [来源与许可](docs/SOURCES_AND_LICENSES.md) · [评测结果](docs/EVALUATION.md)
+[English](README.en.md) · [数据层](data/README.md) · [模型与实验层](experiments/README.md) · [SFT示例](#sft数据示例) · [RAG示例](#rag数据与检索示例) · [来源与许可](docs/SOURCES_AND_LICENSES.md)
 
 面向中文法律问答、案件分析、证据处理与多轮咨询的研究数据：**17,165条SFT样本 + 37,748条RAG资料记录 + 51,017个检索块**。
 
 本仓库发布实际用于 legal-v4 实验的最终数据，不是只给几条示例的展示项目。保留训练/验证划分、来源链接、法条版本与逐条使用状态，提供开箱可读的压缩JSONL、字段说明与完整性校验。
+
+## 两个独立入口：数据与模型实验
+
+只需要数据集，可以直接阅读本页并下载 `data/`；想了解数据如何用于实际模型训练、RAG和评测，请进入 `experiments/`。二者分开维护，新增模型实验不会改变已有数据分片或划分。
+
+| 层次 | 入口 | 内容 |
+| --- | --- | --- |
+| 数据层 | [数据集说明](data/README.md) | SFT训练/验证数据、RAG语料与索引、字段、来源许可、读取示例 |
+| 模型与实验层 | [实验总览](experiments/README.md) | 实际SFT训练配置与过程、RAG索引与检索流程、四组消融评测与结果 |
+
+实验层已加入原V4的配置、过程说明及实际结果；完整训练/推理/评分源码和模型权重尚未在本仓库发布，后续在实验层补充。这里不会把配置文档当作已经开源的完整可运行训练工程。
 
 > **使用前请读许可说明：**这是混合来源的公开研究数据，不是全包MIT/Apache或“可商用”数据集。部分上游仅限学术/非商业用途；训练集11,574条的 `redistribution_status` 仍为 `not_confirmed`，另外还有 `not_cleared`、未记录等状态。公开发布没有补齐这些授权，也不授予未持有的权利。请自行核查拟使用记录的上游条件；无法确认时可通过原链接获取或联系权利人。
 
@@ -278,26 +289,15 @@ print(prompt)
 
 该提示只演示资料注入；实际系统仍需检查事实是否充分、资料适用日期与法域、上下文长度及引文正确性。不能把“检索到了相关法条”当作“答案已经通过法律核验”。
 
-## SFT与RAG的实际使用方式
+## 想了解实际训练与评测？
 
-本轮SFT采用BF16 LoRA：`r=16`、`alpha=32`、`dropout=0.05`、学习率 `2e-5`、1 epoch、训练长度8192、batch 4、梯度累积2。仅Assistant回答和结束标记参与损失，用户输入与系统提示不作为监督目标。多轮记录应监督全部Assistant轮次，不只最后一轮。
+这部分已独立整理到[模型与实验层](experiments/README.md)，不再与数据字段、下载示例混在一起：
 
-原RAG使用BGE-large-zh-v1.5的1024维向量召回、Qwen3-Reranker-0.6B重排，并进行多议题与适用日期/版本处理。V4上下文策略最多4个议题、24个候选、6篇完整证据文档；输入上限16384、输出上限4096。这些是原实验配置，不是本仓库承诺的通用最优参数。BM25/RRF可由使用者自行组合；本仓库主要交付数据，不打包法律Agent应用或完整训练/评测服务。
+- [SFT训练](experiments/sft/README.md)：数据进入模型的过程、Assistant-only损失、LoRA参数与实际训练记录。
+- [RAG流程](experiments/rag/README.md)：索引构建、召回融合、重排、完整资料与上下文组装。
+- [评测过程与结果](experiments/evaluation/README.md)：四组消融、评分口径、实际成绩与逐任务CSV。
 
-## 四组消融结果
-
-每组1,351题、54项任务，来自LawBench / DISC / LexEval的**mini开发子集**，不是官方全量或独立盲测。下表为各基准任务宏平均，按0–100展示：
-
-| 条件 | LawBench | DISC | LexEval |
-| --- | ---: | ---: | ---: |
-| Base | 58.2262 | 68.8181 | 65.4444 |
-| RAG | 58.0692 | **72.7925** | 64.6759 |
-| SFT | 62.3346 | 65.9464 | **68.3203** |
-| SFT+RAG | **63.2988** | 69.8364 | 67.7204 |
-
-SFT+RAG相对Base分别提高 **5.07 / 1.02 / 2.28个百分点**，但DISC的本轮最佳是RAG，LexEval最佳是SFT。不将三个不同基准合成一个“法律总分”，不把多项改动的差异归因于单一数据改进。
-
-评分结合任务客观指标与LLM主观评分；完整运行有180份本轮DeepSeek-v4-pro有效评分回执，不代表180名律师审核。还进行了8个案例家族、32份回答的相关案例对照；发现仍有法条引用、日期金额及追加事实遗漏等问题。详见[评测说明](docs/EVALUATION.md)。
+上述结果属于原V4的mini开发实验，不是使用本数据训练任意模型都能得到的保证。
 
 ## 目录
 
@@ -307,7 +307,12 @@ data/sft/validation/     最终验证分片
 data/rag/corpus/         完整资料单元
 data/rag/chunks/         所有实际检索块
 data/rag/faiss/          可选FAISS归档分片
-docs/                   字段、来源许可、评测说明
+data/README.md          数据层入口
+experiments/            独立的模型与实验层
+experiments/sft/        SFT过程、实际配置与训练摘要
+experiments/rag/        RAG构建和检索过程、实际配置
+experiments/evaluation/ 评测协议、结果与逐任务成绩
+docs/                   数据字段、来源许可、兼容文档入口
 licenses/upstream/      所使用上游的原README/许可说明
 scripts/                读取、提示组装、校验与索引恢复
 manifest.json           数据分片、条数、大小、SHA-256

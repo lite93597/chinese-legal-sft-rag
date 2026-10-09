@@ -1,0 +1,31 @@
+{
+  "experiment": "legal-v4",
+  "status": "original_training_completed_weights_not_published_here",
+  "global_step": 1906,
+  "epoch": 1.0,
+  "metrics": {
+    "train_runtime": 8087.2526,
+    "train_samples_per_second": 1.885,
+    "train_steps_per_second": 0.236,
+    "total_flos": 1.4296590378325832e+18,
+    "train_loss": 0.5874833314516362,
+    "epoch": 1.0
+  },
+  "adapter": {
+    "bytes": 467047680,
+    "tensor_count": 992,
+    "lora_pairs": 496,
+    "weights_in_this_repository": false
+  },
+  "metric_scope": "train_loss is a training statistic, not validation loss or legal accuracy",
+  "source_records": [
+    {
+      "name": "completed.json",
+      "sha256": "9905f868126a288b5a85628b0eacf281e2c6f38227dfcc6834807d777a641ae1"
+    },
+    {
+      "name": "training_manifest.json",
+      "sha256": "3f7ed41a19f18887c33511f558e989c8829f1564bb86d4a31c68444eacc61664"
+    }
+  ]
+}

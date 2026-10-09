@@ -1,0 +1,42 @@
+{
+  "kind": "recorded_training_configuration_not_standalone_entrypoint",
+  "experiment": "legal-v4",
+  "model_label": "Qwen3.8-27B",
+  "data": {
+    "train": "data/sft/train",
+    "validation": "data/sft/validation",
+    "train_examples": 15242,
+    "validation_examples": 1923
+  },
+  "settings": {
+    "seed": 42,
+    "threads": 8,
+    "max_length": 8192,
+    "epochs": 1,
+    "batch_size": 4,
+    "gradient_accumulation_steps": 2,
+    "learning_rate": 2e-05,
+    "warmup_ratio": 0.03,
+    "dtype": "bfloat16",
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "in_proj_qkv",
+      "in_proj_z",
+      "in_proj_b",
+      "in_proj_a",
+      "out_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ],
+    "save_total_limit": 2
+  },
+  "length_grouping": true,
+  "loss": "all_assistant_answers_plus_end_markers_only"
+}
